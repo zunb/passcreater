@@ -1,0 +1,8 @@
+{
+  "create_basetable_sql": "CREATE TABLE BaseTable ( uuid PRIMARY KEY, date TEXT, time TEXT, original_url TEXT, calculate_url TEXT, user TEXT );",
+  "create_passtable_sql": "CREATE TABLE PasswordTable ( uuid TEXT PRIMARY KEY, cipher TEXT, call INT );",
+  "insert_basetable_sql": "INSERT INTO BaseTable ( uuid, date, time, original_url, calculate_url, user ) VALUES ( '{0}', '{1}', '{2}', '{3}', '{4}', '{5}' );",
+  "select_basetable_sql": "SELECT uuid, original_url, calculate_url, user FROM BaseTable WHERE calculate_url LIKE '{0}';",
+  "select_passtable_sql": "SELECT uuid, cipher, call FROM PasswordTable WHERE uuid LIKE '{0}';",
+  "insert_passtable_sql": "INSERT INTO PasswordTable ( uuid, cipher, call ) VALUES ( '{0}', '{1}', '{2}' ); "
+}
